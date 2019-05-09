@@ -77,8 +77,11 @@
     <Compile Include="GradeTypesEnum.cs">
       <DependentUpon>StudentInfoModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PartialClasses\Assignment.cs" />
+    <Compile Include="PartialClasses\AssignmentGrade.cs" />
     <Compile Include="PartialClasses\Course.cs" />
     <Compile Include="PartialClasses\Department.cs" />
+    <Compile Include="PartialClasses\Enrollment.cs" />
     <Compile Include="PartialClasses\School.cs" />
     <Compile Include="PartialClasses\Section.cs" />
     <Compile Include="PartialClasses\Student.cs" />

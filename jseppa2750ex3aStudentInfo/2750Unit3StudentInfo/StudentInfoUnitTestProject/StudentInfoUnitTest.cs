@@ -91,217 +91,217 @@ namespace StudentInfoUnitTestProject
             Assert.AreSame(section2750_202spr, foundSection);
         }
 
-        //[TestMethod]
-        //public void SectionFindEnrollment()
-        //{
-        //    Department comc = this.school.FindDepartment("COMC");
-        //    Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
-        //    Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
-        //    Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
+        [TestMethod]
+        public void SectionFindEnrollment()
+        {
+            Department comc = this.school.FindDepartment("COMC");
+            Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
+            Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
+            Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
 
-        //    Student student = null;
-        //    // Add enrollments
-        //    student = school.FindStudent(10000011);
-        //    new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
-        //    student = school.FindStudent(10000013);
-        //    new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
-        //    student = school.FindStudent(10000015);
-        //    new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
+            Student student = null;
+            // Add enrollments
+            student = school.FindStudent(10000011);
+            new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
+            student = school.FindStudent(10000013);
+            new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
+            student = school.FindStudent(10000015);
+            new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
 
-        //    // Find Enrollment
-        //    Enrollment e13 = section2750_2020spr.FindEnrollment(10000013);
-        //    Assert.AreEqual(10000013, e13.Student.Id);
-        //}
+            // Find Enrollment
+            Enrollment e13 = section2750_2020spr.FindEnrollment(10000013);
+            Assert.AreEqual(10000013, e13.Student.Id);
+        }
 
-        //[TestMethod]
-        //public void StudentFindEnrollment()
-        //{
-        //    Department comc = this.school.FindDepartment("COMC");
-        //    Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
-        //    //comc.Courses.Add(comc2750);
-        //    Term t = null;
-        //    t = school.FindTerm(2019, TermsEnum.Spr);
-        //    Section section2750_2019spr = new Section(100001, 30, comc2750, t);
-        //    t = school.FindTerm(2019, TermsEnum.Fall);
-        //    Section section2750_2019fall = new Section(100002, 24, comc2750, t);
-        //    t = school.FindTerm(2020, TermsEnum.Spr);
-        //    Section section2750_2020spr = new Section(100003, 24, comc2750, t);
+        [TestMethod]
+        public void StudentFindEnrollment()
+        {
+            Department comc = this.school.FindDepartment("COMC");
+            Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
+            //comc.Courses.Add(comc2750);
+            Term t = null;
+            t = school.FindTerm(2019, TermsEnum.Spr);
+            Section section2750_2019spr = new Section(100001, 30, comc2750, t);
+            t = school.FindTerm(2019, TermsEnum.Fall);
+            Section section2750_2019fall = new Section(100002, 24, comc2750, t);
+            t = school.FindTerm(2020, TermsEnum.Spr);
+            Section section2750_2020spr = new Section(100003, 24, comc2750, t);
 
-        //    // Add enrollments
-        //    Student student = student = school.FindStudent(10000013);
-        //    new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2019spr);
-        //    new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2019fall);
-        //    new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
+            // Add enrollments
+            Student student = student = school.FindStudent(10000013);
+            new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2019spr);
+            new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2019fall);
+            new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, student, section2750_2020spr);
 
-        //    // Find Enrollment
-        //    Enrollment e = student.FindEnrollment(100002);
-        //    Assert.AreEqual(10000002, e.Id);
-        //}
+            // Find Enrollment
+            Enrollment e = student.FindEnrollment(100002);
+            Assert.AreEqual(10000002, e.Id);
+        }
 
-        //[TestMethod]
-        //public void SectionFindAssignment()
-        //{
-        //    Department comc = this.school.FindDepartment("COMC");
-        //    Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
-        //    Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
-        //    Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
+        [TestMethod]
+        public void SectionFindAssignment()
+        {
+            Department comc = this.school.FindDepartment("COMC");
+            Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
+            Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
+            Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
 
-        //    // Add Assignments
-        //    new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
-        //        10, DateTime.Parse("1/23/2019"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000002, "1B", "UML domain model, library books",
-        //        10, DateTime.Parse("1/29/2019"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
-        //        10, DateTime.Parse("1/30/2019"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
-        //        10, DateTime.Parse("2/1/2019"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000005, "Q1", "Quiz 1",
-        //        50, DateTime.Parse("2/2/2019"), AssignmentTypesEnum.Q, section2750_2020spr);
+            // Add Assignments
+            new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
+                10, DateTime.Parse("1/23/2019"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000002, "1B", "UML domain model, library books",
+                10, DateTime.Parse("1/29/2019"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
+                10, DateTime.Parse("1/30/2019"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
+                10, DateTime.Parse("2/1/2019"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000005, "Q1", "Quiz 1",
+                50, DateTime.Parse("2/2/2019"), AssignmentTypesEnum.Q, section2750_2020spr);
 
-        //    // Find Assignment
-        //    Assignment ex1C = section2750_2020spr.FindAssignment("1C");
-        //    Assert.AreEqual(10000003, ex1C.Id);
-        //}
+            // Find Assignment
+            Assignment ex1C = section2750_2020spr.FindAssignment("1C");
+            Assert.AreEqual(10000003, ex1C.Id);
+        }
 
-        //[TestMethod]
-        //public void EnrollmentFindAssignmentGrade()
-        //{
-        //    Department comc = this.school.FindDepartment("COMC");
-        //    Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
-        //    Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
-        //    Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
+        [TestMethod]
+        public void EnrollmentFindAssignmentGrade()
+        {
+            Department comc = this.school.FindDepartment("COMC");
+            Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
+            Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
+            Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
 
-        //    // Add Assignments
-        //    new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
-        //        10, DateTime.Parse("1/23/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000002, "1B", "UML domain model, library books",
-        //        10, DateTime.Parse("1/29/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
-        //        10, DateTime.Parse("1/30/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
-        //        10, DateTime.Parse("2/1/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000005, "Q1", "Quiz 1",
-        //        50, DateTime.Parse("2/2/2020"), AssignmentTypesEnum.Q, section2750_2020spr);
+            // Add Assignments
+            new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
+                10, DateTime.Parse("1/23/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000002, "1B", "UML domain model, library books",
+                10, DateTime.Parse("1/29/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
+                10, DateTime.Parse("1/30/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
+                10, DateTime.Parse("2/1/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000005, "Q1", "Quiz 1",
+                50, DateTime.Parse("2/2/2020"), AssignmentTypesEnum.Q, section2750_2020spr);
 
-        //    // Add enrollments
-        //    new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750_2020spr);
-        //    new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750_2020spr);
-        //    new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750_2020spr);
-        //    new Enrollment(10000004, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000017), section2750_2020spr);
-        //    new Enrollment(10000005, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000019), section2750_2020spr);
-        //    new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750_2020spr);
-        //    new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000023), section2750_2020spr);
+            // Add enrollments
+            new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750_2020spr);
+            new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750_2020spr);
+            new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750_2020spr);
+            new Enrollment(10000004, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000017), section2750_2020spr);
+            new Enrollment(10000005, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000019), section2750_2020spr);
+            new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750_2020spr);
+            new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000023), section2750_2020spr);
 
-        //    // Add AssignmentGrades
-        //    new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
-        //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
-        //        section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
-        //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000004, 7, DateTime.Parse("1/23/2019"),
-        //        section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000005, 10, DateTime.Parse("1/20/2019"),
-        //        section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000006, 9, DateTime.Parse("1/21/2019"),
-        //        section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000007, 8, DateTime.Parse("1/22/2019"),
-        //        section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000008, 10, DateTime.Parse("1/23/2019"),
-        //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000009, 9, DateTime.Parse("1/24/2019"),
-        //        section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),
-        //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000011, 7, DateTime.Parse("1/26/2019"),
-        //        section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000012, 8, DateTime.Parse("1/24/2019"),
-        //        section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000013, 9, DateTime.Parse("1/25/2019"),
-        //        section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000014, 10, DateTime.Parse("1/23/2019"),
-        //        section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000015, 9, DateTime.Parse("1/28/2019"),
-        //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1C"));
-        //    new AssignmentGrade(10000016, 8, DateTime.Parse("1/29/2019"),
-        //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1C"));
-        //    new AssignmentGrade(10000017, 7, DateTime.Parse("1/30/2019"),
-        //        section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1C"));
+            // Add AssignmentGrades
+            new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
+                section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
+                section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
+                section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000004, 7, DateTime.Parse("1/23/2019"),
+                section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000005, 10, DateTime.Parse("1/20/2019"),
+                section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000006, 9, DateTime.Parse("1/21/2019"),
+                section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000007, 8, DateTime.Parse("1/22/2019"),
+                section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000008, 10, DateTime.Parse("1/23/2019"),
+                section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000009, 9, DateTime.Parse("1/24/2019"),
+                section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),
+                section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000011, 7, DateTime.Parse("1/26/2019"),
+                section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000012, 8, DateTime.Parse("1/24/2019"),
+                section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000013, 9, DateTime.Parse("1/25/2019"),
+                section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000014, 10, DateTime.Parse("1/23/2019"),
+                section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000015, 9, DateTime.Parse("1/28/2019"),
+                section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1C"));
+            new AssignmentGrade(10000016, 8, DateTime.Parse("1/29/2019"),
+                section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1C"));
+            new AssignmentGrade(10000017, 7, DateTime.Parse("1/30/2019"),
+                section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1C"));
 
-        //    Enrollment enr = section2750_2020spr.FindEnrollment(10000015);
-        //    AssignmentGrade g = enr.FindAssignmentGrade("1B");
-        //    Assert.AreEqual(10000010, g.Id);
-        //}
+            Enrollment enr = section2750_2020spr.FindEnrollment(10000015);
+            AssignmentGrade g = enr.FindAssignmentGrade("1B");
+            Assert.AreEqual(10000010, g.Id);
+        }
 
-        //[TestMethod]
-        //public void AssignmentFindAssignmentGrade()
-        //{
-        //    Department comc = this.school.FindDepartment("COMC");
-        //    Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
-        //    Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
-        //    Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
+        [TestMethod]
+        public void AssignmentFindAssignmentGrade()
+        {
+            Department comc = this.school.FindDepartment("COMC");
+            Course comc2750 = new Course(100003, "2750", "UML Modeling and Iterative Process", 2, comc);
+            Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
+            Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
 
-        //    // Add Assignments
-        //    new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
-        //        10, DateTime.Parse("1/23/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000002, "1B", "UML domain model, library books",
-        //        10, DateTime.Parse("1/29/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
-        //        10, DateTime.Parse("1/30/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
-        //        10, DateTime.Parse("2/1/2020"), AssignmentTypesEnum.E, section2750_2020spr);
-        //    new Assignment(10000005, "Q1", "Quiz 1",
-        //        50, DateTime.Parse("2/2/2020"), AssignmentTypesEnum.Q, section2750_2020spr);
+            // Add Assignments
+            new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
+                10, DateTime.Parse("1/23/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000002, "1B", "UML domain model, library books",
+                10, DateTime.Parse("1/29/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
+                10, DateTime.Parse("1/30/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
+                10, DateTime.Parse("2/1/2020"), AssignmentTypesEnum.E, section2750_2020spr);
+            new Assignment(10000005, "Q1", "Quiz 1",
+                50, DateTime.Parse("2/2/2020"), AssignmentTypesEnum.Q, section2750_2020spr);
 
-        //    // Add enrollments
-        //    new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750_2020spr);
-        //    new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750_2020spr);
-        //    new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750_2020spr);
-        //    new Enrollment(10000004, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000017), section2750_2020spr);
-        //    new Enrollment(10000005, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000019), section2750_2020spr);
-        //    new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750_2020spr);
-        //    new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000023), section2750_2020spr);
+            // Add enrollments
+            new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750_2020spr);
+            new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750_2020spr);
+            new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750_2020spr);
+            new Enrollment(10000004, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000017), section2750_2020spr);
+            new Enrollment(10000005, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000019), section2750_2020spr);
+            new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750_2020spr);
+            new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000023), section2750_2020spr);
 
-        //    // Add AssignmentGrades
-        //    new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
-        //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
-        //        section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
-        //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000004, 7, DateTime.Parse("1/23/2019"),
-        //        section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000005, 10, DateTime.Parse("1/20/2019"),
-        //        section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000006, 9, DateTime.Parse("1/21/2019"),
-        //        section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000007, 8, DateTime.Parse("1/22/2019"),
-        //        section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1A"));
-        //    new AssignmentGrade(10000008, 10, DateTime.Parse("1/23/2019"),
-        //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000009, 9, DateTime.Parse("1/24/2019"),
-        //        section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),
-        //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000011, 7, DateTime.Parse("1/26/2019"),
-        //        section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000012, 8, DateTime.Parse("1/24/2019"),
-        //        section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000013, 9, DateTime.Parse("1/25/2019"),
-        //        section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000014, 10, DateTime.Parse("1/23/2019"),
-        //        section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1B"));
-        //    new AssignmentGrade(10000015, 9, DateTime.Parse("1/28/2019"),
-        //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1C"));
-        //    new AssignmentGrade(10000016, 8, DateTime.Parse("1/29/2019"),
-        //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1C"));
-        //    new AssignmentGrade(10000017, 7, DateTime.Parse("1/30/2019"),
-        //        section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1C"));
+            // Add AssignmentGrades
+            new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
+                section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
+                section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
+                section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000004, 7, DateTime.Parse("1/23/2019"),
+                section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000005, 10, DateTime.Parse("1/20/2019"),
+                section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000006, 9, DateTime.Parse("1/21/2019"),
+                section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000007, 8, DateTime.Parse("1/22/2019"),
+                section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1A"));
+            new AssignmentGrade(10000008, 10, DateTime.Parse("1/23/2019"),
+                section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000009, 9, DateTime.Parse("1/24/2019"),
+                section2750_2020spr.FindEnrollment(10000013), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),
+                section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000011, 7, DateTime.Parse("1/26/2019"),
+                section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000012, 8, DateTime.Parse("1/24/2019"),
+                section2750_2020spr.FindEnrollment(10000019), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000013, 9, DateTime.Parse("1/25/2019"),
+                section2750_2020spr.FindEnrollment(10000021), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000014, 10, DateTime.Parse("1/23/2019"),
+                section2750_2020spr.FindEnrollment(10000023), section2750_2020spr.FindAssignment("1B"));
+            new AssignmentGrade(10000015, 9, DateTime.Parse("1/28/2019"),
+                section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1C"));
+            new AssignmentGrade(10000016, 8, DateTime.Parse("1/29/2019"),
+                section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1C"));
+            new AssignmentGrade(10000017, 7, DateTime.Parse("1/30/2019"),
+                section2750_2020spr.FindEnrollment(10000017), section2750_2020spr.FindAssignment("1C"));
 
-        //    Assignment a = section2750_2020spr.FindAssignment("1B");
-        //    AssignmentGrade g = a.FindAssignmentGrade(10000013);
-        //    Assert.AreEqual(10000009, g.Id);
-        //}
+            Assignment a = section2750_2020spr.FindAssignment("1B");
+            AssignmentGrade g = a.FindAssignmentGrade(10000013);
+            Assert.AreEqual(10000009, g.Id);
+        }
 
         //[TestMethod]
         //public void EnrollmentCalcTotalPoints()
@@ -311,7 +311,7 @@ namespace StudentInfoUnitTestProject
         //    Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
         //    Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
 
-        //    // Add Assignments
+        //    //Add Assignments
         //    new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
         //        10, DateTime.Parse("1/23/2020"), AssignmentTypesEnum.E, section2750_2020spr);
         //    new Assignment(10000002, "1B", "UML domain model, library books",
@@ -323,7 +323,7 @@ namespace StudentInfoUnitTestProject
         //    new Assignment(10000005, "Q1", "Quiz 1",
         //        50, DateTime.Parse("2/2/2020"), AssignmentTypesEnum.Q, section2750_2020spr);
 
-        //    // Add enrollments
+        //    //Add enrollments
         //    new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750_2020spr);
         //    new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750_2020spr);
         //    new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750_2020spr);
@@ -332,7 +332,7 @@ namespace StudentInfoUnitTestProject
         //    new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750_2020spr);
         //    new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000023), section2750_2020spr);
 
-        //    // Add AssignmentGrades
+        //    //Add AssignmentGrades
         //    new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
         //        section2750_2020spr.FindEnrollment(10000011), section2750_2020spr.FindAssignment("1A"));
         //    new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
@@ -385,7 +385,7 @@ namespace StudentInfoUnitTestProject
         //    Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
         //    Section section2750_2020spr = new Section(100002, 24, comc2750, term2020spr);
 
-        //    // Add Assignments
+        //    //Add Assignments
         //    new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
         //        10, DateTime.Parse("1/23/2020"), AssignmentTypesEnum.E, section2750_2020spr);
         //    new Assignment(10000002, "1B", "UML domain model, library books",
@@ -397,10 +397,10 @@ namespace StudentInfoUnitTestProject
         //    new Assignment(10000005, "Q1", "Quiz 1",
         //        50, DateTime.Parse("2/2/2020"), AssignmentTypesEnum.Q, section2750_2020spr);
 
-        //    // Add enrollments
+        //    //Add enrollments
         //    new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750_2020spr);
 
-        //    // Add AssignmentGrades
+        //    //Add AssignmentGrades
         //    new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
         //        section2750_2020spr.FindEnrollment(10000015), section2750_2020spr.FindAssignment("1A"));
         //    new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),

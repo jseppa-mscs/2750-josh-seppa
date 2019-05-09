@@ -8,25 +8,47 @@ namespace StudentInfoEx3AConsoleApp
 {
     public partial class Section
     {
-        public Section(int id, int capacity, Course course, Term term, Assignment assignment, Enrollment enrollment)
+        public Section(int id, short capacity, Course course, Term term)
         {
-            this.Enrollments = new HashSet<Enrollment>();
             this.Assignments = new HashSet<Assignment>();
+            this.Enrollments = new HashSet<Enrollment>();
             this.Id = id;
             this.Capacity = capacity;
             this.Course = course;
-            this.Term = term;
-            this.Assignments = Assignments;
-            this.Enrollments = Enrollments;
             course.Sections.Add(this);
+            this.Term = term;
+            term.Sections.Add(this);
+
         }
-        public Section(int id, int capacity, Course course, Term term)
+
+        public Assignment FindAssignment(string assign)
         {
-            this.Id = id;
-            this.Capacity = capacity;
-            this.Course = course;
-            this.Term = term;
-            course.Sections.Add(this);
+            //return this.Courses.Find(c => c.CourseNum == courseNum);
+            Assignment foundAssignment = null;
+
+            foreach (Assignment a in this.Assignments)
+            {
+                if (a.Assign == assign)
+                {
+                    foundAssignment = a;
+                    break;
+                }
+            }
+            return foundAssignment;
+        }
+
+        public Enrollment FindEnrollment(int studentId)
+        {
+            Enrollment foundEnrollment = null;
+            foreach (Enrollment e in this.Enrollments)
+            {
+                if (e.Student.Id == studentId)
+                {
+                    foundEnrollment = e;
+                    break;
+                }
+            }
+            return foundEnrollment;
         }
     }
 }

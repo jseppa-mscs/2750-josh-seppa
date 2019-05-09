@@ -8,8 +8,8 @@ namespace StudentInfoEx3AConsoleApp
 {
     public partial class Student
     {
-        public Student(int id, string lastName, string firstName, 
-            string loginName, string emailAddress, string phoneNumber, 
+        public Student(int id, string lastName, string firstName,
+            string loginName, string emailAddress, string phoneNumber,
             string address, string city, string state, string zipCode, School school)
         {
             this.Enrollments = new HashSet<Enrollment>();

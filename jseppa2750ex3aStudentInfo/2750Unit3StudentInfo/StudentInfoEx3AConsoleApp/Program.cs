@@ -29,7 +29,7 @@ namespace StudentInfoEx3AConsoleApp
             // Terms
             System.Console.WriteLine("----------    Terms    ----------");
             new Term(101, 2019, TermsEnum.Spr, school);
-            new Term(102, 2019, TermsEnum.Spr, school);
+            new Term(102, 2020, TermsEnum.Fall, school);
             new Term(103, 2020, TermsEnum.Spr, school);
 
             foreach (Term t in school.Terms)
@@ -94,6 +94,7 @@ namespace StudentInfoEx3AConsoleApp
             Section section2750 = null;
             Term term2019spr = school.FindTerm(2019, TermsEnum.Spr);
             section2750 = new Section(100001, 30, comc2750, term2019spr);
+
             Term term2020spr = school.FindTerm(2020, TermsEnum.Spr);
             section2750 = new Section(100002, 24, comc2750, term2020spr);
             section2750 = new Section(100003, 30, comc2750, term2020spr);
@@ -111,92 +112,92 @@ namespace StudentInfoEx3AConsoleApp
                     + s.Id.ToString() + "  Cap: " + s.Capacity.ToString());
             }
 
-            //// Enrollments
-            //System.Console.WriteLine("----------  Enrollments  ----------");
-            //new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750);
-            //new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750);
-            //new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750);
-            //new Enrollment(10000004, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000017), section2750);
-            //new Enrollment(10000005, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000019), section2750);
-            //new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750);
-            //new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000022), section2750);
-            //System.Console.WriteLine(section2750.Term.Year.ToString() + section2750.Term.TermEnum.ToString() + "\t"
-            //        + section2750.Id.ToString() + "\t" + section2750.Course.Department.Dept + section2750.Course.CourseNum);
-            //foreach (Enrollment e in section2750.Enrollments)
-            //{
-            //    System.Console.WriteLine("\tGrade: " + e.Grade.ToString() + "  " + e.Student.Id 
-            //        + "  " + e.Student.LastName + ", " + e.Student.FirstName);
-            //}
+            // Enrollments
+            System.Console.WriteLine("----------  Enrollments  ----------");
+            new Enrollment(10000001, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000011), section2750);
+            new Enrollment(10000002, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000013), section2750);
+            new Enrollment(10000003, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000015), section2750);
+            new Enrollment(10000004, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000017), section2750);
+            new Enrollment(10000005, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000019), section2750);
+            new Enrollment(10000006, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000021), section2750);
+            new Enrollment(10000007, GradeTypesEnum.AF, GradesEnum.Z, school.FindStudent(10000022), section2750);
+            System.Console.WriteLine(section2750.Term.Year.ToString() + section2750.Term.TermEnum.ToString() + "\t"
+                    + section2750.Id.ToString() + "\t" + section2750.Course.Department.Dept + section2750.Course.CourseNum);
+            foreach (Enrollment e in section2750.Enrollments)
+            {
+                System.Console.WriteLine("\tGrade: " + e.Grade.ToString() + "  " + e.Student.Id
+                    + "  " + e.Student.LastName + ", " + e.Student.FirstName);
+            }
 
-            //// Assignments
-            //System.Console.WriteLine("----------  Assignments  ----------");
-            //new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
-            //    10, DateTime.Parse("1/23/2019"), AssignmentTypesEnum.E, section2750);
-            //new Assignment(10000002, "1B", "UML domain model, library books",
-            //    10, DateTime.Parse("1/29/2019"), AssignmentTypesEnum.E, section2750);
-            //new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
-            //    10, DateTime.Parse("1/30/2019"), AssignmentTypesEnum.E, section2750);
-            //new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
-            //    10, DateTime.Parse("2/1/2019"), AssignmentTypesEnum.E, section2750);
-            //new Assignment(10000005, "Q1", "Quiz 1",
-            //    50, DateTime.Parse("2/2/2019"), AssignmentTypesEnum.Q, section2750);
+            // Assignments
+            System.Console.WriteLine("----------  Assignments  ----------");
+            new Assignment(10000001, "1A", "Worksheet, identify student grade info classes",
+                10, DateTime.Parse("1/23/2019"), AssignmentTypesEnum.E, section2750);
+            new Assignment(10000002, "1B", "UML domain model, library books",
+                10, DateTime.Parse("1/29/2019"), AssignmentTypesEnum.E, section2750);
+            new Assignment(10000003, "1C", "UML Student Info domain model w/associations",
+                10, DateTime.Parse("1/30/2019"), AssignmentTypesEnum.E, section2750);
+            new Assignment(10000004, "1D", "Modify 1B (Library system): add attributes & operations",
+                10, DateTime.Parse("2/1/2019"), AssignmentTypesEnum.E, section2750);
+            new Assignment(10000005, "Q1", "Quiz 1",
+                50, DateTime.Parse("2/2/2019"), AssignmentTypesEnum.Q, section2750);
 
-            //System.Console.WriteLine(section2750.Term.Year.ToString() + section2750.Term.TermEnum.ToString() + "\t"
-            //    + section2750.Id.ToString() + "\t" + section2750.Course.Department.Dept + section2750.Course.CourseNum);
-            //foreach (Assignment a in section2750.Assignments)
-            //{
-            //    System.Console.WriteLine("\t" + a.Assign + "  Pts: " + a.MaxPoints + "  " + a.Description);
-            //}
+            System.Console.WriteLine(section2750.Term.Year.ToString() + section2750.Term.TermEnum.ToString() + "\t"
+                + section2750.Id.ToString() + "\t" + section2750.Course.Department.Dept + section2750.Course.CourseNum);
+            foreach (Assignment a in section2750.Assignments)
+            {
+                System.Console.WriteLine("\t" + a.Assign + "  Pts: " + a.MaxPoints + "  " + a.Description);
+            }
 
-            //// AssignmentGrades
-            //System.Console.WriteLine("-------  Assignment Grades  -------");
-            //new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
-            //    section2750.FindEnrollment(10000011), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
-            //    section2750.FindEnrollment(10000013), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
-            //    section2750.FindEnrollment(10000015), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000004, 7, DateTime.Parse("1/23/2019"),
-            //    section2750.FindEnrollment(10000017), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000005, 10, DateTime.Parse("1/20/2019"),
-            //    section2750.FindEnrollment(10000019), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000006, 9, DateTime.Parse("1/21/2019"),
-            //    section2750.FindEnrollment(10000021), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000007, 8, DateTime.Parse("1/22/2019"),
-            //    section2750.FindEnrollment(10000022), section2750.FindAssignment("1A"));
-            //new AssignmentGrade(10000008, 10, DateTime.Parse("1/23/2019"),
-            //    section2750.FindEnrollment(10000011), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000009, 9, DateTime.Parse("1/24/2019"),
-            //    section2750.FindEnrollment(10000013), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),
-            //    section2750.FindEnrollment(10000015), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000011, 7, DateTime.Parse("1/26/2019"),
-            //    section2750.FindEnrollment(10000017), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000012, 8, DateTime.Parse("1/24/2019"),
-            //    section2750.FindEnrollment(10000019), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000013, 9, DateTime.Parse("1/25/2019"),
-            //    section2750.FindEnrollment(10000021), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000014, 10, DateTime.Parse("1/23/2019"),
-            //    section2750.FindEnrollment(10000022), section2750.FindAssignment("1B"));
-            //new AssignmentGrade(10000015, 9, DateTime.Parse("1/28/2019"),
-            //    section2750.FindEnrollment(10000011), section2750.FindAssignment("1C"));
-            //new AssignmentGrade(10000016, 8, DateTime.Parse("1/29/2019"),
-            //    section2750.FindEnrollment(10000015), section2750.FindAssignment("1C"));
-            //new AssignmentGrade(10000017, 7, DateTime.Parse("1/30/2019"),
-            //    section2750.FindEnrollment(10000017), section2750.FindAssignment("1C"));
-            //new AssignmentGrade(10000018, 10, DateTime.Parse("1/26/2019"),
-            //    section2750.FindEnrollment(10000015), section2750.FindAssignment("1D"));
-            //new AssignmentGrade(10000020, 46, DateTime.Parse("1/26/2019"),
-            //    section2750.FindEnrollment(10000015), section2750.FindAssignment("Q1"));
+            // AssignmentGrades
+            System.Console.WriteLine("-------  Assignment Grades  -------");
+            new AssignmentGrade(10000001, 10, DateTime.Parse("1/20/2019"),
+                section2750.FindEnrollment(10000011), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000002, 9, DateTime.Parse("1/21/2019"),
+                section2750.FindEnrollment(10000013), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000003, 8, DateTime.Parse("1/22/2019"),
+                section2750.FindEnrollment(10000015), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000004, 7, DateTime.Parse("1/23/2019"),
+                section2750.FindEnrollment(10000017), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000005, 10, DateTime.Parse("1/20/2019"),
+                section2750.FindEnrollment(10000019), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000006, 9, DateTime.Parse("1/21/2019"),
+                section2750.FindEnrollment(10000021), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000007, 8, DateTime.Parse("1/22/2019"),
+                section2750.FindEnrollment(10000022), section2750.FindAssignment("1A"));
+            new AssignmentGrade(10000008, 10, DateTime.Parse("1/23/2019"),
+                section2750.FindEnrollment(10000011), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000009, 9, DateTime.Parse("1/24/2019"),
+                section2750.FindEnrollment(10000013), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000010, 8, DateTime.Parse("1/25/2019"),
+                section2750.FindEnrollment(10000015), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000011, 7, DateTime.Parse("1/26/2019"),
+                section2750.FindEnrollment(10000017), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000012, 8, DateTime.Parse("1/24/2019"),
+                section2750.FindEnrollment(10000019), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000013, 9, DateTime.Parse("1/25/2019"),
+                section2750.FindEnrollment(10000021), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000014, 10, DateTime.Parse("1/23/2019"),
+                section2750.FindEnrollment(10000022), section2750.FindAssignment("1B"));
+            new AssignmentGrade(10000015, 9, DateTime.Parse("1/28/2019"),
+                section2750.FindEnrollment(10000011), section2750.FindAssignment("1C"));
+            new AssignmentGrade(10000016, 8, DateTime.Parse("1/29/2019"),
+                section2750.FindEnrollment(10000015), section2750.FindAssignment("1C"));
+            new AssignmentGrade(10000017, 7, DateTime.Parse("1/30/2019"),
+                section2750.FindEnrollment(10000017), section2750.FindAssignment("1C"));
+            new AssignmentGrade(10000018, 10, DateTime.Parse("1/26/2019"),
+                section2750.FindEnrollment(10000015), section2750.FindAssignment("1D"));
+            new AssignmentGrade(10000020, 46, DateTime.Parse("1/26/2019"),
+                section2750.FindEnrollment(10000015), section2750.FindAssignment("Q1"));
 
-            //foreach (Assignment a in section2750.Assignments)
-            //{
-            //    System.Console.WriteLine(a.Assign + "  Pts: " + a.MaxPoints + "  " + a.Description);
-            //    foreach (AssignmentGrade g in a.AssignmentGrades)
-            //    {
-            //        System.Console.WriteLine("\t" + g.Points.ToString("n0").PadLeft(2) + "  " + g.Enrollment.Student.LastName + ", " + g.Enrollment.Student.FirstName);
-            //    }
-            //}
+            foreach (Assignment a in section2750.Assignments)
+            {
+                System.Console.WriteLine(a.Assign + "  Pts: " + a.MaxPoints + "  " + a.Description);
+                foreach (AssignmentGrade g in a.AssignmentGrades)
+                {
+                    System.Console.WriteLine("\t" + g.Points.ToString("n0").PadLeft(2) + "  " + g.Enrollment.Student.LastName + ", " + g.Enrollment.Student.FirstName);
+                }
+            }
 
             //System.Console.WriteLine(section2750.Term.Year.ToString() + section2750.Term.TermEnum.ToString() + "\t"
             //    + section2750.Id.ToString() + "\t" + section2750.Course.Department.Dept + section2750.Course.CourseNum);

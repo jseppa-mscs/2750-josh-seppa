@@ -8,7 +8,8 @@ namespace StudentInfoEx3AConsoleApp
 {
     public partial class Course
     {
-        public Course(int id, String courseNum, String courseTitle, short credits, Department department)
+        public Course(int id, string courseNum, string courseTitle,
+            short credits, Department department)
         {
             this.Sections = new HashSet<Section>();
             this.Id = id;
@@ -17,17 +18,32 @@ namespace StudentInfoEx3AConsoleApp
             this.Credits = credits;
             this.Department = department;
             department.Courses.Add(this);
+
         }
 
         public Section FindSection(int id)
         {
-            // based on sectionId
+            //return this.Sections.Find(s => s.Id == id);
             Section foundSection = null;
-            foreach (Section c in this.Sections)
+
+            foreach (Section s in this.Sections)
             {
-                if (c.Id == id)
+                if (s.Id == id)
                 {
-                    foundSection = c;
+                    foundSection = s;
+                    break;
+                }
+            }
+            return foundSection;
+        }
+        public Section FindSection(Course course, Term term)
+        {
+            Section foundSection = null;
+            foreach (Section s in this.Sections)
+            {
+                if (s.Course.Id == course.Id && s.Term.Id == term.Id)
+                {
+                    foundSection = s;
                     break;
                 }
             }
